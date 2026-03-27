@@ -1,0 +1,30 @@
+# ── 核心依赖（生产环境必须）─────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+pydantic==2.8.0
+pydantic-settings==2.4.0      # 配置管理，从 .env 读取参数
+
+# ── 模型推理 ─────────────────────────────────────────────────────────
+# 注意：torch 需要单独安装 GPU 版本，见下方说明
+# pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+torch==2.4.0
+transformers==4.44.0
+sentence-transformers==3.0.0
+accelerate==0.33.0            # 半精度推理加速（float16）
+
+# ── 知识库 ───────────────────────────────────────────────────────────
+chromadb==0.5.0
+
+# ── LLM 集成（Ollama / Qwen API）────────────────────────────────────
+openai==1.40.0                # 兼容 Ollama 的 OpenAI 客户端
+
+# ── 工具库 ───────────────────────────────────────────────────────────
+loguru==0.7.2                 # 结构化日志
+httpx==0.27.0                 # 异步 HTTP 客户端
+
+# ── 开发/测试依赖（可选，仅开发环境安装）────────────────────────────
+# pip install -r requirements-dev.txt
+# pytest==8.3.0
+# pytest-asyncio==0.23.0
+# rich==13.7.0                # 彩色终端输出
+# black==24.8.0               # 代码格式化
