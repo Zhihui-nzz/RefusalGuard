@@ -1,7 +1,7 @@
 [README.md](https://github.com/user-attachments/files/26454858/README.md)
 # RefusalGuard
 
-**RefusalGuard** 是一个面向大语言模型的提示词注入防御网关，可接入任意 LLM 前端，提供多层次的安全检测与拒答能力。
+面向大语言模型的提示词注入防御网关，接入任意 LLM 前端，提供多层次的安全检测与拒答能力。
 
 ## 核心特性
 
