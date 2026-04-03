@@ -1,14 +1,11 @@
-"""
-M5: 可解释拒答生成模块 v2.1
-方案A（默认）：模板驱动，零额外资源，延迟 < 1ms
-方案B（llm_enabled=True）：Ollama/Qwen API 生成个性化拒答，延迟 ~2s
-自动降级：LLM 调用失败时无缝回退到模板
-"""
+# M5: 可解释拒答生成模块
+# 方案A：模板驱动，零额外资源，延迟 < 1ms
+# 方案B：Ollama/Qwen API 生成个性化拒答，延迟 ~2s
+
 from dataclasses import dataclass
-from .decision_engine import Decision
+from backend.modules.decision_engine import Decision
 from backend.config import settings
 from loguru import logger
-
 
 @dataclass
 class RefusalResponse:
@@ -16,7 +13,6 @@ class RefusalResponse:
     explanation:      str   # 内部解释（用于日志/仪表盘）
     suggested_action: str   # 建议的后续操作
     llm_generated:    bool = False  # 是否由 LLM 生成
-
 
 class RefusalGenerator:
 
