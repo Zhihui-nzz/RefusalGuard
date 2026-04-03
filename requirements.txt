@@ -1,0 +1,30 @@
+# 核心依赖
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+pydantic==2.8.0
+pydantic-settings==2.4.0      
+
+#模型推理 
+
+# pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+torch==2.4.0
+transformers==4.44.0
+sentence-transformers==3.0.0
+accelerate==0.33.0
+           
+# 知识库 
+chromadb==0.5.0
+
+# LLM 集成（Ollama / Qwen API）
+openai==1.40.0                
+
+# 工具库 
+loguru==0.7.2                 
+httpx==0.27.0                
+
+# 开发/测试依赖
+# pip install -r requirements-dev.txt
+# pytest==8.3.0
+# pytest-asyncio==0.23.0
+# rich==13.7.0                
+# black==24.8.0               
