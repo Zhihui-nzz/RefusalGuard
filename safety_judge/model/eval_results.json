@@ -1,0 +1,60 @@
+{
+  "best_val_f1": 0.8867,
+  "test_loss": 0.321,
+  "test_macro_f1": 0.9135,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6942,
+      "val_loss": 0.4229,
+      "val_f1": 0.8254,
+      "elapsed_s": 719.1
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3526,
+      "val_loss": 0.3456,
+      "val_f1": 0.8816,
+      "elapsed_s": 718.3
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.162,
+      "val_loss": 0.5029,
+      "val_f1": 0.8859,
+      "elapsed_s": 717.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.0676,
+      "val_loss": 0.5388,
+      "val_f1": 0.8867,
+      "elapsed_s": 716.9
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.0422,
+      "val_loss": 0.5651,
+      "val_f1": 0.8786,
+      "elapsed_s": 717.1
+    }
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n      benign     0.9742    0.9728    0.9735       698\n   injection     0.9539    0.9505    0.9522       283\n     harmful     0.7857    0.8462    0.8148        26\n\n    accuracy                         0.9633      1007\n   macro avg     0.9046    0.9232    0.9135      1007\nweighted avg     0.9636    0.9633    0.9634      1007\n",
+  "confusion_matrix": [
+    [
+      679,
+      13,
+      6
+    ],
+    [
+      14,
+      269,
+      0
+    ],
+    [
+      4,
+      0,
+      22
+    ]
+  ]
+}

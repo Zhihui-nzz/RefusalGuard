@@ -1,0 +1,17 @@
+{
+  "total": 10064,
+  "train": 8051,
+  "val": 1006,
+  "test": 1007,
+  "label_distribution": {
+    "0": 6802,
+    "1": 2986,
+    "2": 276
+  },
+  "source_distribution": {
+    "deepset_prompt_injections": 546,
+    "lmsys_toxic_chat": 5082,
+    "neuralchemy_pi": 4391,
+    "zh_builtin": 45
+  }
+}
