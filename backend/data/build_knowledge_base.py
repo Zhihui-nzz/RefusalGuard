@@ -4,7 +4,7 @@ import requests
 from sentence_transformers import SentenceTransformer
 from loguru import logger
 
-# OWASP LLM Top 10 核心条目（硬编码，避免网络依赖）
+# OWASP LLM Top 10 
 OWASP_LLM_TOP10 = [
     {
         "id": "LLM01",
@@ -32,7 +32,7 @@ OWASP_LLM_TOP10 = [
     },
 ]
 
-# MITRE ATT&CK for Enterprise - AI/ML 相关技术（精选）
+# MITRE ATT&CK for Enterprise - AI/ML 相关技术
 MITRE_AI_TECHNIQUES = [
     {
         "id": "T1059",
@@ -64,7 +64,7 @@ def build_knowledge_base():
     logger.info("初始化 ChromaDB...")
     client = chromadb.PersistentClient(path="./backend/data/knowledge_base/chroma_db")
     
-    # 删除旧集合（重建时使用）
+    # 删除旧集合
     try:
         client.delete_collection("security_knowledge")
     except Exception:
@@ -75,7 +75,7 @@ def build_knowledge_base():
         metadata={"hnsw:space": "cosine"}
     )
     
-    logger.info("加载嵌入模型（约 400MB，首次下载）...")
+    logger.info("加载嵌入模型...")
     # 使用多语言模型，支持中英文检索
     embedder = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
     
